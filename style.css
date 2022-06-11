@@ -1,7 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 1px solid red;
+}
+
+@font-face {
+    font-family: 'charis-bold';
+    src: url('CharisSIL-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'charis-regular';
+    src: url('CharisSIL-Regular.ttf') format('ttf');
 }
 
 body {
@@ -11,20 +21,22 @@ body {
 
 .container { 
     display: grid; 
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 .header {
-    background-color: #a5b4fc;
+    background-color: #e0f2fe;
     grid-column: 2; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    
+    font: 'charis-bold', Verdana;
     
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 2fr;
 }
 
 .header > .searchbar {
@@ -35,7 +47,7 @@ body {
 
 .searchbar input[type="text"] {
     border-radius: 5px;
-    width: 400px;
+    width: 600px;
     height: 20px;
     border: 1px solid rgb(241, 241, 241);
     background-color: rgb(241, 241, 241);
@@ -70,13 +82,48 @@ img {
 
 p:first-child {
     padding-bottom: 10px;
+    font-size: small;
+    font-weight: bold;
 }
 
+p:last-child {
+    font-weight: bold;
+}
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.buttons > button {
+    border-radius: 10px;
+    border: none;
+    background-color: #0369a1;
+    color: #e0f2fe;
+    margin: 5px; 
+    padding: 5px 10px;
+    width: 70px;  
+}
+
+button:hover {
+    background-color: rgb(108, 108, 108);
+}
+
+.name {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
 
 .sidebar {
-    background-color: #e9d5ff;
-    
+    background-color: #0c4a6e;
+    grid-row: 1/4;
+    color: white;
+}
+
+.sidebar ul,
+.sidebar li {
+   list-style: none;
 }
 
 .wrapper {
