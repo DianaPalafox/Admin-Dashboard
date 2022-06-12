@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /*outline: 1px solid red;*/
 }
 
 @font-face {
@@ -91,14 +90,16 @@ img:hover {
     margin: 5px 20px;
 }
 
-p:first-child {
-    padding-bottom: 10px;
+.greeting-one {
+    padding-bottom: 5px;
     font-size: small;
     font-weight: bold;
+    font-size: 13px;
 }
 
-p:last-child {
+.greeting-two {
     font-weight: bold;
+    font-size: 20px;
 }
 
 .buttons {
@@ -166,8 +167,85 @@ ul:hover {
     background-color: #0369a1;
     cursor: pointer;
 }
+
 .wrapper {
-    background-color: white;
+    background-color: #f7f7f7;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 6fr 1fr;
 }
 
+.right {
+    grid-column: 2;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 30px;
+    
+}
+
+.box, .box-two {
+    width: 250px;
+    height: 350px; 
+    border-radius: 10px;
+    background-color: #0f679a;
+    margin: 20px;
+    box-shadow: 3px 3px rgb(212, 211, 211);
+}
+
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box p {
+    color:white; 
+    font-size: 0.7rem;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+.box .text {
+    padding: 10px 30px;
+}
+
+.box h5 {
+    color: #e0f2fe;
+}
+
+hr {
+    width: 90%;
+    border: 1px solid #e0f2fe;;
+}
+
+.right h2 {
+    font-size: 1.3rem;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.trending {
+    grid-column: 2;
+ }
+
+.perfiles {
+    color: white;
+    gap:10px;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.box-two {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 5px; 
+    height: 300px;
+}
+
+.description {
+    font-size: 0.8rem;
+}
 
